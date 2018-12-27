@@ -35,6 +35,8 @@ LOCAL_AAPT_FLAGS := \
     --extra-packages android.support.v7.recyclerview
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
+    libSudaSdk \
+    libSudaPinYin \
     android-common \
     android-support-design \
     android-support-transition \
@@ -46,6 +48,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v4 \
     com.android.vcard \
     guava \
+    voip-common \
     libphonenumber \
     legacy-android-test \
     junit
@@ -60,7 +63,8 @@ LOCAL_PROGUARD_FLAG_FILES := \
     ../../../frameworks/support/design/proguard-rules.pro \
     ../../../frameworks/support/v7/recyclerview/proguard-rules.pro
 
-LOCAL_SDK_VERSION := current
+#LOCAL_SDK_VERSION := current
+LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_MIN_SDK_VERSION := 21
 
 include $(BUILD_PACKAGE)

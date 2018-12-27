@@ -2,6 +2,7 @@
   public <init>(...);
 }
 
+-dontwarn org.codehaus.mojo.**
 # Xml files containing onClick (menus and layouts) require that proguard not
 # remove their handlers.
 -keepclassmembers class * extends android.app.Activity {
